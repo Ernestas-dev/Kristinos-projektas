@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+}
+
+/* nav starts here  */
+/* TODO: Nav */
+header.section--nav {
+    height: 100px;
+    width: 100%;
+    background: blueviolet;
+}
+/* nav ends here  */
+
+/* global section starts here */
+.section {
+    width: 100%;
+    height: 100vh;
+}
+
+.section:nth-child(2n+0) {
+    background-color: aqua;
+}
+/* global section ends here */
+
+/* info section starts here */
+.section--info {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.section--info.section--info__physical {
+    background: red;
+    width: 50%;
+}
+
+.section--info.section--info__spiritual {
+    background: grey;
+    width: 50%;
+}
+/* info section ends here */
+
+/* link section starts here */
+.section--link {
+    display: grid;
+    grid-template-areas: "left right-top"
+                         "left right-bottom";
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    width: 100%;
+}
+.section--link.section--link__about {
+    background: blueviolet;
+    grid-area: left;
+}
+
+.section--link.section--link__physical {
+    background: green;
+    grid-area: right-top;
+}
+
+.section--link.section--link__spiritual {
+    background: #fff;
+    grid-area: right-bottom;
+}
+/* link section ends here */
+
+/* footer starts here  */
+footer .footer--section {
+    height: 100px;
+    width: 100%;
+    background: black;
+}
+/* footer ends here  */
