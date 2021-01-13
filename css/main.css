@@ -8,17 +8,23 @@
     --p-dark: #111;
 }
 
-body,
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
-
 /* nav starts here  */
 /* TODO: Nav */
 .section--hero.toggle__active {
     right: 300px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 
 .section--hero header {
@@ -62,7 +68,7 @@ body,
     position: absolute;
     right: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     padding: 100px;
     display: flex;
     justify-content: space-between;
@@ -230,13 +236,14 @@ body,
 /* hero-box ends here */
 /* -------------------------------------------------------------------------------- */
 /* global section starts here */
-.section {
+.content--wrap section {
     width: 100%;
     height: 100vh;
+    scroll-snap-align: center;
 }
 
-.section:nth-child(2n+0) {
-    background-color: aqua;
+section:nth-child(2n+0) {
+    background-color: var(--effect-color);
 }
 /* global section ends here */
 /* -------------------------------------------------------------------------------- */
@@ -248,7 +255,7 @@ body,
 }
 
 .section--info__physical {
-    background: red;
+    background: green;
     width: 50%;
 }
 
@@ -268,7 +275,7 @@ body,
     width: 100%;
 }
 .section--link__about {
-    background: blueviolet;
+    background: var(--effect-color);
     grid-area: left;
 }
 
@@ -278,7 +285,7 @@ body,
 }
 
 .section--link__spiritual {
-    background: #fff;
+    background: var(--white-text);
     grid-area: right-bottom;
 }
 /* link section ends here */
@@ -287,6 +294,6 @@ body,
 footer .footer--section {
     height: 100px;
     width: 100%;
-    background: black;
+    background: var(--p-dark);
 }
 /* footer ends here  */
